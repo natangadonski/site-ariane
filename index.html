@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ariane | Design de Interiores</title>
+  <meta name="description" content="Design de interiores com intenção, identidade e acolhimento. Projetos pensados para quem você é e para a vida que você quer viver.">
+  <meta name="theme-color" content="#F5F0E8">
+
+  <!-- Compartilhamento (WhatsApp, Instagram, etc.) -->
+  <meta property="og:title" content="Ariane | Design de Interiores">
+  <meta property="og:description" content="Seu sonho cabe na sua vida. Projetos de interiores com intenção, identidade e acolhimento.">
+  <meta property="og:type" content="website">
+  <!-- <meta property="og:image" content="img/compartilhar.jpg"> -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Ariane | Design de Interiores",
+      "description": "Design de interiores com intenção, identidade e acolhimento."
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+
+  <!-- ===== MENU ===== -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo" aria-label="Ariane, início">Ariane Abreu</a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+
+      <nav class="menu" id="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--primary btn--small" href="#" data-whatsapp="Olá! Vim pelo site e gostaria de conversar sobre o meu espaço.">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== 1. ABERTURA ===== -->
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+
+        <div class="hero-text">
+          <p class="eyebrow">Design de interiores</p>
+          <h1>Seu sonho cabe na <em>sua vida.</em></h1>
+          <p class="lead">
+            Uma casa pensada para quem você é, para a rotina que você vive
+            e para a vida que deseja construir.
+          </p>
+          <p>
+            Projetos de interiores que unem identidade, funcionalidade e intenção,
+            respeitando suas necessidades e suas possibilidades.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#projetos">Conheça meus projetos</a>
+            <a class="btn btn--outline" href="#" data-whatsapp="Olá! Vim pelo site e gostaria de conversar sobre o meu espaço.">Vamos conversar</a>
+          </div>
+        </div>
+
+        <!-- Para trocar a foto: salve em img/hero.jpg -->
+        <div class="hero-visual" role="img" aria-label="Ambiente projetado pela Ariane">
+          <svg class="spiral" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M50 50 m0 0 a4 4 0 1 1 8 0 a9 9 0 1 1 -18 0 a15 15 0 1 1 30 0 a22 22 0 1 1 -44 0 a29 29 0 1 1 58 0"
+                  fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 2. FILOSOFIA ===== -->
+    <section class="sobre section-space" id="sobre">
+      <div class="container sobre-inner reveal">
+        <p class="eyebrow">Um jeito de morar</p>
+        <h2>Bonito, sim. Mas com espaço para a vida acontecer.</h2>
+        <p class="lead">Acredito em casas que acolhem quem você é, respeitam sua rotina e acompanham as mudanças da vida.</p>
+        <p>Mais do que escolher peças bonitas, cada decisão precisa fazer sentido para as pessoas que vivem ali. O projeto parte da escuta e transforma necessidades, desejos e possibilidades em espaços com identidade.</p>
+      </div>
+    </section>
+
+    <!-- ===== 3. PORTFÓLIO ===== -->
+    <section class="projetos section-space" id="projetos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Projetos</p>
+          <h2>Espaços pensados para a vida real.</h2>
+          <p>Cada projeto começa com uma necessidade diferente. Conheça algumas das soluções que desenvolvi para transformar espaços em lugares que fazem sentido.</p>
+        </div>
+
+        <div class="project-grid">
+          <button class="project-card reveal" type="button" data-project="0" aria-haspopup="dialog">
+            <span class="project-image"><img src="img/projeto-1.jpg" alt="Projeto residencial com ambientes acolhedores e funcionais" width="720" height="520" loading="lazy"></span>
+            <span class="project-copy"><span class="project-title">Projeto residencial</span><span>Funcionalidade, conforto e identidade.</span></span>
+          </button>
+          <button class="project-card reveal" type="button" data-project="1" aria-haspopup="dialog">
+            <span class="project-image"><img src="img/projeto-2.jpg" alt="Cozinha planejada para facilitar a rotina" width="720" height="520" loading="lazy"></span>
+            <span class="project-copy"><span class="project-title">Cozinha planejada</span><span>Decisões que facilitam a rotina.</span></span>
+          </button>
+          <button class="project-card reveal" type="button" data-project="2" aria-haspopup="dialog">
+            <span class="project-image"><img src="img/projeto-3.jpg" alt="Dormitório pensado para descanso e pertencimento" width="720" height="520" loading="lazy"></span>
+            <span class="project-copy"><span class="project-title">Dormitório</span><span>Um espaço de descanso e pertencimento.</span></span>
+          </button>
+          <button class="project-card reveal" type="button" data-project="3" aria-haspopup="dialog">
+            <span class="project-image"><img src="img/projeto-4.jpg" alt="Espaço de trabalho organizado para quem usa" width="720" height="520" loading="lazy"></span>
+            <span class="project-copy"><span class="project-title">Espaço de trabalho</span><span>Um ambiente que acompanha as necessidades de quem usa.</span></span>
+          </button>
+          <button class="project-card reveal" type="button" data-project="4" aria-haspopup="dialog">
+            <span class="project-image"><img src="img/projeto-5.jpg" alt="Quarto infantil pensado para crescer junto" width="720" height="520" loading="lazy"></span>
+            <span class="project-copy"><span class="project-title">Quarto infantil</span><span>Um cantinho pensado para crescer junto.</span></span>
+          </button>
+          <button class="project-card reveal" type="button" data-project="5" aria-haspopup="dialog">
+            <span class="project-image"><img src="img/projeto-6.jpg" alt="Sala integrada com espaços que se conversam" width="720" height="520" loading="lazy"></span>
+            <span class="project-copy"><span class="project-title">Sala integrada</span><span>Espaços que se conversam no dia a dia.</span></span>
+          </button>
+        </div>
+        <p class="project-note">Imagens de projetos e estudos de ambientes desenvolvidos pela Ariane.</p>
+      </div>
+    </section>
+
+    <dialog class="project-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="Fechar detalhes do projeto">Fechar</button>
+      <img class="dialog-image" src="" alt="" width="1200" height="800">
+      <div class="dialog-content">
+        <p class="eyebrow">Projeto</p>
+        <h2 id="dialog-title"></h2>
+        <dl class="project-details">
+          <div><dt>O desafio</dt><dd></dd></div>
+          <div><dt>A intenção</dt><dd></dd></div>
+          <div><dt>As soluções</dt><dd></dd></div>
+          <div><dt>O resultado</dt><dd></dd></div>
+        </dl>
+      </div>
+    </dialog>
+
+    <!-- ===== 4. SERVIÇOS ===== -->
+    <section class="servicos section-space" id="servicos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Serviços</p>
+          <h2>Três jeitos de começar.</h2>
+          <p>Escolha o que combina com o momento que você está vivendo.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card service-card--featured reveal">
+            <p class="service-number">01</p><p class="eyebrow">Consultoria</p>
+            <h3>Finalmente em Casa</h3>
+            <p class="service-intro">Sua próxima fase merece uma casa que acompanhe você.</p>
+            <dl><div><dt>Para quem é</dt><dd>Quem sabe que algo precisa mudar, mas ainda não sabe por onde começar.</dd></div><div><dt>Você recebe</dt><dd>Uma consultoria individual, análise das suas necessidades e um guia personalizado com prioridades, soluções e próximos passos.</dd></div></dl>
+            <p class="investment-label">Investimento-piloto</p>
+            <!-- Só manter este valor enquanto for a condição real da oferta-piloto. -->
+            <p class="investment">R$ 297</p>
+            <a class="btn btn--primary" href="#contato" data-whatsapp="Olá! Tenho interesse na consultoria Finalmente em Casa.">Quero encontrar meu caminho</a>
+          </article>
+          <article class="service-card reveal">
+            <p class="service-number">02</p><p class="eyebrow">Projeto de interiores</p>
+            <h3>Projeto de Vida</h3>
+            <p class="service-intro">Um projeto que traduz quem você é e acolhe a vida que você quer viver.</p>
+            <dl><div><dt>Para quem é</dt><dd>Quem deseja um espaço planejado de acordo com sua identidade, sua rotina e suas possibilidades.</dd></div><div><dt>Você recebe</dt><dd>Um projeto de interiores personalizado, com os entregáveis definidos para o espaço contratado.</dd></div></dl>
+            <p class="investment-label">Investimento</p><p class="investment">Orçamento personalizado</p>
+            <a class="btn btn--outline" href="#contato" data-whatsapp="Olá! Gostaria de conversar sobre um Projeto de Vida para meu espaço.">Quero projetar meu espaço</a>
+          </article>
+          <article class="service-card reveal">
+            <p class="service-number">03</p><p class="eyebrow">Projeto + acompanhamento</p>
+            <h3>Sonho em Cada Detalhe</h3>
+            <p class="service-intro">Do projeto à realização, com cuidado em cada etapa.</p>
+            <dl><div><dt>Para quem é</dt><dd>Quem quer desenvolver o projeto e contar com suporte durante etapas combinadas da realização.</dd></div><div><dt>Você recebe</dt><dd>O projeto de interiores e o acompanhamento previsto na proposta, com limites e responsabilidades definidos.</dd></div></dl>
+            <p class="investment-label">Investimento</p><p class="investment">Orçamento personalizado</p>
+            <a class="btn btn--outline" href="#contato" data-whatsapp="Olá! Quero conhecer o serviço Sonho em Cada Detalhe.">Quero realizar meu projeto</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. COMO FUNCIONA ===== -->
+    <section class="processo section-space" id="processo">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">Etapas</p><h2>Como funciona.</h2></div>
+        <ol class="process-list">
+          <li class="reveal"><span>01</span><h3>Vamos conversar</h3><p>Você me conta sobre o espaço, a fase que está vivendo e o que deseja transformar.</p></li>
+          <li class="reveal"><span>02</span><h3>Encontramos o caminho</h3><p>Entendo suas necessidades e identifico qual serviço pode atender melhor ao que você precisa.</p></li>
+          <li class="reveal"><span>03</span><h3>Definimos a proposta</h3><p>Você recebe o escopo, os entregáveis, os prazos, o investimento e as condições antes de contratar.</p></li>
+          <li class="reveal"><span>04</span><h3>Damos forma às possibilidades</h3><p>O trabalho começa conforme o serviço contratado, com etapas e comunicação alinhadas.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 6. CONTATO ===== -->
+    <section class="contato section-space" id="contato">
+      <div class="container contact-inner">
+        <div class="contact-intro reveal">
+          <p class="eyebrow">Contato</p>
+          <h2>Vamos conversar sobre sua casa?</h2>
+          <p>Toda transformação começa com uma conversa. Conte um pouco sobre o espaço que deseja transformar e o que você gostaria de viver nele.</p>
+          <a class="btn btn--primary contact-whatsapp" href="#" data-whatsapp="Olá! Vim pelo site e gostaria de conversar sobre o meu espaço.">Chamar no WhatsApp</a>
+        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-field"><label for="nome">Nome</label><input id="nome" name="nome" autocomplete="name" required></div>
+          <div class="form-field"><label for="servico">Qual serviço combina com você?</label><select id="servico" name="servico" required><option value="">Selecione uma opção</option><option>Finalmente em Casa — consultoria</option><option>Projeto de Vida — projeto de interiores</option><option>Sonho em Cada Detalhe — projeto com acompanhamento</option><option>Ainda não sei qual é o ideal para mim</option></select></div>
+          <div class="form-field"><label for="espaco">Qual espaço deseja transformar?</label><input id="espaco" name="espaco" required></div>
+          <div class="form-field"><label for="cidade">Cidade do imóvel</label><input id="cidade" name="cidade" autocomplete="address-level2" required></div>
+          <div class="form-field"><label for="mensagem">O que você gostaria de mudar ou conquistar?</label><textarea id="mensagem" name="mensagem" rows="4" required></textarea></div>
+          <p class="form-error" id="form-error" aria-live="polite"></p>
+          <button class="btn btn--primary" type="submit">Preparar minha mensagem</button>
+          <p class="form-success" id="form-success" role="status" aria-live="polite"></p>
+          <p class="privacy-note">Seus dados são usados apenas para iniciar a conversa pelo WhatsApp e não ficam armazenados no site.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><a href="#inicio" class="logo">Ariane Abreu</a><p>Seu sonho cabe na sua vida.</p></div>
+      <nav aria-label="Links do rodapé"><a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a><a href="#" data-whatsapp="Olá! Vim pelo site e gostaria de conversar sobre o meu espaço.">WhatsApp</a>
+        <!-- Instagram: inserir link oficial quando disponível. -->
+      </nav>
+      <p class="copyright">© <span id="current-year"></span> Ariane Abreu</p>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="#" data-whatsapp="Olá! Vim pelo site e gostaria de conversar sobre o meu espaço." aria-label="Conversar com Ariane pelo WhatsApp">WhatsApp</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
