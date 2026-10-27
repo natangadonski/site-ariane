@@ -5,7 +5,7 @@
 /* ---------- Configuração ---------- */
 // Número do WhatsApp da Ariane: só dígitos, com 55 + DDD + número.
 // Exemplo: 5542999999999
-const WHATSAPP_NUMERO = "55XXXXXXXXXXX";
+const WHATSAPP_NUMERO = "5542988530521";
 
 // Preencha estes textos quando os detalhes reais de cada projeto estiverem definidos.
 const DETALHES_PROJETOS = [
@@ -76,11 +76,11 @@ formulario.addEventListener("submit", (evento) => {
   const dados = new FormData(formulario);
   const texto = [
     "Olá! Gostaria de conversar sobre meu espaço.",
-    `Nome: ${dados.get("nome")}`,
-    `Serviço: ${dados.get("servico")}`,
-    `Espaço: ${dados.get("espaco")}`,
-    `Cidade do imóvel: ${dados.get("cidade")}`,
-    `O que gostaria de mudar ou conquistar: ${dados.get("mensagem")}`
+    `Meu nome é ${dados.get("nome")}`,
+    `Tenho interesse no serviço de${dados.get("servico")}`,
+    `Meu espaço é um(a) ${dados.get("espaco")}`,
+    `Localizado em ${dados.get("cidade")}`,
+    `O que gostaria de mudar ou conquistar é ${dados.get("mensagem")}`
   ].join("\n");
 
   avisoSucesso.textContent = "Mensagem preparada. O WhatsApp será aberto para você revisar e enviar.";
