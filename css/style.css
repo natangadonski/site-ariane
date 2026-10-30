@@ -172,12 +172,51 @@ h1, h2, h3 {
 
 .hero-visual {
   position: relative;
-  min-height: 380px;
-  border-radius: 220px 220px 24px 24px; /* formato de arco */
-  background:
-    url("../img/hero.jpg") center / cover no-repeat,
-    linear-gradient(160deg, var(--marrom), var(--azul));
-  overflow: hidden;
+  min-height: clamp(380px, 112vw, 500px);
+  overflow: visible;
+  isolation: isolate;
+}
+.hero-visual::before,
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  width: 80%;
+  height: 80%;
+  border-radius: 999px 999px 0 0;
+  pointer-events: none;
+}
+/* Arco principal em tons terrosos; ajuste o gradiente aqui se necessário. */
+.hero-visual::before {
+  z-index: 1;
+  background: linear-gradient(185deg, #E3CDBF 0%, #BF9C88 52%, #9A7260 120%);
+  box-shadow: inset 0 -40px 60px rgba(60, 35, 25, .16);
+}
+/* Moldura fina deslocada para cima e à direita, sem base. */
+.hero-visual::after {
+  z-index: 0;
+  left: calc(10% + 14px);
+  bottom: 14px;
+  border: 1.5px solid rgba(121, 85, 72, .85);
+  border-bottom: 0;
+}
+.hero-visual img {
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 14px 18px rgba(80, 55, 45, .30));
+  -webkit-mask-image: linear-gradient(to bottom, #000 86%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 86%, transparent 100%);
+  animation: entrada-foto-hero .75s ease-out both;
+}
+@keyframes entrada-foto-hero {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ---------- Seções compartilhadas ---------- */
@@ -193,14 +232,15 @@ h1, h2, h3 {
 .project-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
 .project-card {
   display: block; width: 100%; padding: 0; overflow: hidden; text-align: left;
-  color: var(--azul); background: transparent; border: 0; cursor: pointer;
+  color: var(--azul); background: transparent; border: 0;
 }
+.project-card--interactive { cursor: pointer; }
 .project-image {
   display: block; aspect-ratio: 1.38; overflow: hidden;
   background: linear-gradient(145deg, var(--marrom), var(--azul));
 }
 .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
-.project-card:hover .project-image img { transform: scale(1.035); }
+.project-card--interactive:hover .project-image img { transform: scale(1.035); }
 .project-copy { display: grid; gap: .25rem; padding: .9rem .1rem; }
 .project-title { font-family: var(--font-titulo); font-size: 1.4rem; font-weight: 600; }
 .project-note { margin: 1.25rem 0 0; color: var(--marrom); font-size: .9rem; text-align: center; }
@@ -288,17 +328,8 @@ h1, h2, h3 {
 
 @media (prefers-reduced-motion: reduce) {
   .com-animacao .reveal, .project-image img, .floating-whatsapp { transition: none; }
-  .project-card:hover .project-image img { transform: none; }
+  .project-card--interactive:hover .project-image img { transform: none; }
 }
-
-.spiral {
-  position: absolute; right: -10%; bottom: -10%;
-  width: 70%;
-  color: var(--dourado);
-  opacity: .55;
-  animation: girar 60s linear infinite;
-}
-@keyframes girar { to { transform: rotate(360deg); } }
 
 @media (min-width: 821px) {
   .hero { padding: 4rem 0 6rem; }
@@ -309,7 +340,7 @@ h1, h2, h3 {
 /* Respeita quem prefere menos movimento */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .spiral { animation: none; }
+  .hero-visual img { animation: none; opacity: 1; transform: none; }
   .btn { transition: none; }
 }
 

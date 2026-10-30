@@ -3,6 +3,9 @@
    ========================================================= */
 
 /* ---------- Configuração ---------- */
+// Ative quando os textos de DETALHES_PROJETOS estiverem preenchidos.
+const MODAL_PROJETOS_ATIVO = false;
+
 // Número do WhatsApp da Ariane: só dígitos, com 55 + DDD + número.
 // Exemplo: 5542999999999
 const WHATSAPP_NUMERO = "5542988530521";
@@ -34,28 +37,44 @@ const tituloDialogo = document.querySelector("#dialog-title");
 const fecharDialogo = document.querySelector(".dialog-close");
 let ultimoCardAtivo;
 
-document.querySelectorAll(".project-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    const indice = Number(card.dataset.project);
-    const imagem = card.querySelector("img");
-    const detalhes = DETALHES_PROJETOS[indice];
-    ultimoCardAtivo = card;
-    tituloDialogo.textContent = card.querySelector(".project-title").textContent;
-    imagemDialogo.src = imagem.src;
-    imagemDialogo.alt = imagem.alt;
-    [detalhes.desafio, detalhes.intencao, detalhes.solucoes, detalhes.resultado].forEach((texto, posicao) => {
-      dialogoProjeto.querySelectorAll(".project-details dd")[posicao].textContent = texto;
-    });
-    dialogoProjeto.showModal();
-    fecharDialogo.focus();
-  });
-});
+if (MODAL_PROJETOS_ATIVO) {
+  document.querySelectorAll(".project-card").forEach((card) => {
+    // Os cards são artigos sem interação por padrão; esta configuração os torna botões acessíveis.
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("aria-haspopup", "dialog");
+    card.classList.add("project-card--interactive");
 
-fecharDialogo.addEventListener("click", () => dialogoProjeto.close());
-dialogoProjeto.addEventListener("click", (evento) => {
-  if (evento.target === dialogoProjeto) dialogoProjeto.close();
-});
-dialogoProjeto.addEventListener("close", () => ultimoCardAtivo?.focus());
+    const abrirDialogo = () => {
+      const indice = Number(card.dataset.project);
+      const imagem = card.querySelector("img");
+      const detalhes = DETALHES_PROJETOS[indice];
+      ultimoCardAtivo = card;
+      tituloDialogo.textContent = card.querySelector(".project-title").textContent;
+      imagemDialogo.src = imagem.src;
+      imagemDialogo.alt = imagem.alt;
+      [detalhes.desafio, detalhes.intencao, detalhes.solucoes, detalhes.resultado].forEach((texto, posicao) => {
+        dialogoProjeto.querySelectorAll(".project-details dd")[posicao].textContent = texto;
+      });
+      dialogoProjeto.showModal();
+      fecharDialogo.focus();
+    };
+
+    card.addEventListener("click", abrirDialogo);
+    card.addEventListener("keydown", (evento) => {
+      if (evento.key === "Enter" || evento.key === " ") {
+        evento.preventDefault();
+        abrirDialogo();
+      }
+    });
+  });
+
+  fecharDialogo.addEventListener("click", () => dialogoProjeto.close());
+  dialogoProjeto.addEventListener("click", (evento) => {
+    if (evento.target === dialogoProjeto) dialogoProjeto.close();
+  });
+  dialogoProjeto.addEventListener("close", () => ultimoCardAtivo?.focus());
+}
 
 /* ---------- Formulário que prepara a conversa ---------- */
 const formulario = document.querySelector("#contact-form");
@@ -77,10 +96,10 @@ formulario.addEventListener("submit", (evento) => {
   const texto = [
     "Olá! Gostaria de conversar sobre meu espaço.",
     `Meu nome é ${dados.get("nome")}`,
-    `Tenho interesse no serviço de${dados.get("servico")}`,
+    `Tenho interesse no serviço de ${dados.get("servico")}`,
     `Meu espaço é um(a) ${dados.get("espaco")}`,
     `Localizado em ${dados.get("cidade")}`,
-    `O que gostaria de mudar ou conquistar é ${dados.get("mensagem")}`
+    `O que gostaria de mudar ou conquistar é o seguinte: ${dados.get("mensagem")}`
   ].join("\n");
 
   avisoSucesso.textContent = "Mensagem preparada. O WhatsApp será aberto para você revisar e enviar.";

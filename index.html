@@ -7,18 +7,21 @@
   <title>Ariane | Design de Interiores</title>
   <meta name="description" content="Design de interiores com intenção, identidade e acolhimento. Projetos pensados para quem você é e para a vida que você quer viver.">
   <meta name="theme-color" content="#F5F0E8">
+  <link rel="canonical" href="https://arianeabreuinteriores.com.br/">
 
   <!-- Compartilhamento (WhatsApp, Instagram, etc.) -->
   <meta property="og:title" content="Ariane | Design de Interiores">
   <meta property="og:description" content="Seu sonho cabe na sua vida. Projetos de interiores com intenção, identidade e acolhimento.">
   <meta property="og:type" content="website">
-  <!-- <meta property="og:image" content="img/compartilhar.jpg"> -->
+  <meta property="og:url" content="https://arianeabreuinteriores.com.br/">
+  <!-- <meta property="og:image" content="https://arianeabreuinteriores.com.br/img/compartilhar.jpg"> -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Ariane | Design de Interiores",
-      "description": "Design de interiores com intenção, identidade e acolhimento."
+      "description": "Design de interiores com intenção, identidade e acolhimento.",
+      "url": "https://arianeabreuinteriores.com.br/"
     }
   </script>
 
@@ -78,12 +81,8 @@
           </div>
         </div>
 
-        <!-- Para trocar a foto: salve em img/hero.jpg -->
-        <div class="hero-visual" role="img" aria-label="Ambiente projetado pela Ariane">
-          <svg class="spiral" viewBox="0 0 100 100" aria-hidden="true">
-            <path d="M50 50 m0 0 a4 4 0 1 1 8 0 a9 9 0 1 1 -18 0 a15 15 0 1 1 30 0 a22 22 0 1 1 -44 0 a29 29 0 1 1 58 0"
-                  fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          </svg>
+        <div class="hero-visual">
+          <img src="img/ariane.png" alt="Ariane, designer de interiores" width="1086" height="1448" fetchpriority="high">
         </div>
 
       </div>
@@ -109,30 +108,30 @@
         </div>
 
         <div class="project-grid">
-          <button class="project-card reveal" type="button" data-project="0" aria-haspopup="dialog">
+          <article class="project-card reveal" data-project="0">
             <span class="project-image"><img src="img/projeto-1.png" alt="Projeto residencial com ambientes acolhedores e funcionais" width="720" height="520" loading="lazy"></span>
             <span class="project-copy"><span class="project-title">Projeto residencial</span><span>Funcionalidade, conforto e identidade.</span></span>
-          </button>
-          <button class="project-card reveal" type="button" data-project="1" aria-haspopup="dialog">
+          </article>
+          <article class="project-card reveal" data-project="1">
             <span class="project-image"><img src="img/projeto-2.png" alt="Cozinha planejada para facilitar a rotina" width="720" height="520" loading="lazy"></span>
             <span class="project-copy"><span class="project-title">Cozinha planejada</span><span>Decisões que facilitam a rotina.</span></span>
-          </button>
-          <button class="project-card reveal" type="button" data-project="2" aria-haspopup="dialog">
+          </article>
+          <article class="project-card reveal" data-project="2">
             <span class="project-image"><img src="img/projeto-3.png" alt="Dormitório pensado para descanso e pertencimento" width="720" height="520" loading="lazy"></span>
             <span class="project-copy"><span class="project-title">Dormitório</span><span>Um espaço de descanso e pertencimento.</span></span>
-          </button>
-          <button class="project-card reveal" type="button" data-project="3" aria-haspopup="dialog">
+          </article>
+          <article class="project-card reveal" data-project="3">
             <span class="project-image"><img src="img/projeto-4.png" alt="Espaço de trabalho organizado para quem usa" width="720" height="520" loading="lazy"></span>
             <span class="project-copy"><span class="project-title">Espaço de trabalho</span><span>Um ambiente que acompanha as necessidades de quem usa.</span></span>
-          </button>
-          <button class="project-card reveal" type="button" data-project="4" aria-haspopup="dialog">
+          </article>
+          <article class="project-card reveal" data-project="4">
             <span class="project-image"><img src="img/projeto-5.png" alt="Quarto infantil pensado para crescer junto" width="720" height="520" loading="lazy"></span>
             <span class="project-copy"><span class="project-title">Quarto infantil</span><span>Um cantinho pensado para crescer junto.</span></span>
-          </button>
-          <button class="project-card reveal" type="button" data-project="5" aria-haspopup="dialog">
+          </article>
+          <article class="project-card reveal" data-project="5">
             <span class="project-image"><img src="img/projeto-6.png" alt="Sala integrada com espaços que se conversam" width="720" height="520" loading="lazy"></span>
             <span class="project-copy"><span class="project-title">Sala integrada</span><span>Espaços que se conversam no dia a dia.</span></span>
-          </button>
+          </article>
         </div>
         <p class="project-note">Imagens de projetos e estudos de ambientes desenvolvidos pela Ariane.</p>
       </div>
@@ -234,7 +233,12 @@
     <div class="container footer-inner">
       <div><a href="#inicio" class="logo">Ariane Abreu</a><p>Seu sonho cabe na sua vida.</p></div>
       <nav aria-label="Links do rodapé"><a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a><a href="#" data-whatsapp="Olá! Vim pelo site e gostaria de conversar sobre o meu espaço.">WhatsApp</a>
-        <!-- Instagram: inserir link oficial quando disponível. -->
+        <!-- [PREENCHER: URL do perfil] -->
+        <a href="https://www.instagram.com/ariane.interiores?psln=MW05bWtlazE0aTRmdQ%3D%3D" aria-label="Instagram da Ariane" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <!-- [PREENCHER: URL do perfil] -->
+        <a href="#" aria-label="Facebook da Ariane" target="_blank" rel="noopener noreferrer" hidden>Facebook</a>
+        <!-- [PREENCHER: URL do perfil] -->
+        <a href="#" aria-label="TikTok da Ariane" target="_blank" rel="noopener noreferrer" hidden>TikTok</a>
       </nav>
       <p class="copyright">© <span id="current-year"></span> Ariane Abreu</p>
     </div>
